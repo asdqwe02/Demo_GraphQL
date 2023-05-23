@@ -28,6 +28,7 @@ const connectDB = async () => {
 connectDB();
 
 const server = new ApolloServer({
+  introspection: true,
   typeDefs,
   resolvers,
   context: () => ({ mongoDataMethods })
